@@ -26,50 +26,98 @@
                 </div> -->
             </div>
             <div class="card-body">
-                <div class="table-responsive">
-                    <table class="mb-0 table table-borderless table-striped table-hover" id="purchase"
-                        style="width:100%">
-                        <thead class="hdr-uppercase">
-                            <tr>
-                                <th>Trans ID</th>
-                                <th>Trans Time</th>
-                                <th>Trans Amount</th>
-                                <th>Bill Refe No</th>
-                                <th>Invoice Number</th>
-                                <th>Balance</th>
-                                <th>3<sup>rd</sup> Party Trans ID</th>
-                                <th>Telephone</th>
-                                <th>First Name</th>
-                                <th>Middle Name</th>
-                                <th>Last Name</th>
-                                <th>Posting Desc</th>
-                                <th>Posting Indicator</th>
-                                <th>SMS Sent</th>
-                                <!-- <th>Select</th> -->
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let data of ConfirmationsArray">
-                                <td>{{data.TransID}}</td>
-                                <td>{{data.TransTime}}</td>
-                                <td>{{data.TransAmount}}</td>
-                                <td>{{data.BillRefNumber}}</td>
-                                <td>{{data.InvoiceNumber}}</td>
-                                <td>{{data.OrgAccountBalance}}</td>
-                                <td>{{data.ThirdPartyTransID}}</td>
-                                <td>{{data.MSISDN}}</td>
-                                <td>{{data.FirstName}}</td>
-                                <td>{{data.MiddleName}}</td>
-                                <td>{{data.LastName}}</td>
-                                <td>{{data.PostingDescription}}</td>
-                                <td *ngIf="data.PostingInd =='E'" class="error" (click)="action(data.ID)"><span class="mb-2 mr-2 mt-2 badge badge-danger">Error</span></td>
-                                <td *ngIf="data.PostingInd !='E'"><span class="mb-2 mr-2 mt-2 badge badge-success">Success</span></td>
-                                <td *ngIf="data.SMSSent == 0"><span class="mb-2 mr-2 mt-2 badge badge-danger"><i class="fas fa-times"></i></span></td>
-                                <td *ngIf="data.SMSSent == 1"><span class="mb-2 mr-2 mt-2 badge badge-success"><i class="fas fa-check"></i></span></td>
-                                <!-- <td><input type="checkbox" name="name1" />&nbsp;</td> -->
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="">
+                    <div class="table-responsive">
+                        <table class="mb-0 table table-borderless table-striped table-hover" id="purchase" width="100%">
+                            <thead class="hdr-uppercase">
+                                <tr>
+                                    <th>Trans ID</th>
+                                    <th>Trans Time</th>
+                                    <th>Trans Amount</th>
+                                    <th>Bill Refe No</th>
+                                    <th>Invoice Number</th>
+                                    <th>Balance</th>
+                                    <th>3<sup>rd</sup> Party Trans ID</th>
+                                    <th>Telephone</th>
+                                    <th>First Name</th>
+                                    <th>Middle Name</th>
+                                    <th>Last Name</th>
+                                    <th>Posting Desc</th>
+                                    <th>Posting Indicator</th>
+                                    <th>SMS Sent</th>
+                                    <!-- <th>Select</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of ConfirmationsArray">
+                                    <td>{{data.TransID}}</td>
+                                    <td>{{data.TransTime}}</td>
+                                    <td>{{data.TransAmount}}</td>
+                                    <td>{{data.BillRefNumber}}</td>
+                                    <td>{{data.InvoiceNumber}}</td>
+                                    <td>{{data.OrgAccountBalance}}</td>
+                                    <td>{{data.ThirdPartyTransID}}</td>
+                                    <td>{{data.MSISDN}}</td>
+                                    <td>{{data.FirstName}}</td>
+                                    <td>{{data.MiddleName}}</td>
+                                    <td>{{data.LastName}}</td>
+                                    <td>{{data.PostingDescription}}</td>
+                                    <!-- <td *ngIf="data.PostingInd =='E'" class="error" (click)="action(data.ID)"><span class="mb-2 mr-2 mt-2 badge badge-danger">Error</span></td>
+                                    <td *ngIf="data.PostingInd !='E'"><span class="mb-2 mr-2 mt-2 badge badge-success">Success</span></td> -->
+                                    <td *ngIf="data.PostingInd =='E'">
+                                        <div class="dropdown dropup">
+                                            <button class="btn btn-danger btn-xs dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Error
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Post to SAP</a>
+                                                <a class="dropdown-item" href="#">View Details</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td *ngIf="data.PostingInd =='S' || data.PostingInd =='I'">
+                                        <div class="dropdown dropup">
+                                            <button class="btn btn-success btn-xs dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Success
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">View Details</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td *ngIf="data.PostingInd == '' || data.PostingInd == null">
+                                        <div class="dropdown dropup">
+                                            <button class="btn btn-outline-info btn-xs dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Post to SAP</a>
+                                                <a class="dropdown-item" href="#">View Details</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!-- <td *ngIf="data.SMSSent == 0"><span class="mb-2 mr-2 mt-2 badge badge-danger"><i class="fas fa-times"></i></span></td>
+                                    <td *ngIf="data.SMSSent == 1"><span class="mb-2 mr-2 mt-2 badge badge-success"><i class="fas fa-check"></i></span></td> -->
+                                    <td *ngIf="data.SMSSent == 0">
+                                        <button class="btn btn-danger btn-xs" type="button">
+                                            Failed
+                                        </button>
+                                    </td>
+                                    <td *ngIf="data.SMSSent == 1">
+                                        <button class="btn btn-success btn-xs" type="button">
+                                            Success
+                                        </button>
+                                    </td>
+                                    <td *ngIf="data.SMSSent == '' || data.SMSSent == null">
+                                        <button class="btn btn-outline-info btn-xs" type="button">
+                                            Pending
+                                        </button>
+                                    </td>
+                                    <!-- <td><input type="checkbox" name="name1" />&nbsp;</td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

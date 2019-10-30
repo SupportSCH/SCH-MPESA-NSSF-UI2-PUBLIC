@@ -453,3 +453,12 @@ table.pvtTable tbody tr th {
       color: rgb(228, 226, 123) !important; // action text color
   }
 }
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.dropdown-menu {
+  min-width: 8rem;
+}
