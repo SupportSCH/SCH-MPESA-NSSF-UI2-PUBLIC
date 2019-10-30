@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="main-card mb-5 card">
+            <div class="card-header bg-primary text-white">VALIDATIONS
+                <!-- <div class="btn-actions-pane-right">
+                    <div role="group" class="btn-group-sm btn-group">
+                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            class="btn-shadow dropdown-toggle btn btn-focus">
+                            <span class="btn-icon-wrapper pr-2 opacity-7">
+                                <i class="fa fa-filter fa-w-20"></i>
+                            </span>
+                            Filter
+                        </button>
+                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a (click)="opensearch()" class="nav-link">
+                                        <span>
+                                            Advanced Search
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="mb-0 table table-borderless table-striped table-hover" id="purchase"
+                        style="width:100%">
+                        <thead class="hdr-uppercase">
+                            <tr>
+                                <th>Trans ID</th>
+                                <th>Trans Time</th>
+                                <th>Trans Amount</th>
+                                <th>Customer No</th>
+                                <th>Invoice Number</th>
+                                <th>Balance</th>
+                                <th>3<sup>rd</sup> Party Trans ID</th>
+                                <th>Telephone</th>
+                                <th>First Name</th>
+                                <th>Middle Name</th>
+                                <th>Last Name</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of ValidationArray">
+                                <td>{{data.TransID}}</td>
+                                <td>{{data.TransTime}}</td>                               
+                                <td>{{data.TransAmount}}</td>
+                                <td>{{data.BillRefNumber}}</td>
+                                <td>{{data.InvoiceNumber}}</td>
+                                <td>{{data.OrgAccountBalance}}</td>
+                                <td>{{data.ThirdPartyTransID}}</td>
+                                <td>{{data.MSISDN}}</td>
+                                <td>{{data.FirstName}}</td>
+                                <td>{{data.MiddleName}}</td>
+                                <td>{{data.LastName}}</td>
+                                <td *ngIf="data.ResultDesc == 'Accepted'"><span class="mb-2 mr-2 mt-2 badge badge-success"><i class="fas fa-check"></i></span></td>
+                                <td *ngIf="data.ResultDesc == 'Rejected'"><span class="mb-2 mr-2 mt-2 badge badge-danger"><i class="fas fa-times"></i></span></td>
+                                <td *ngIf="data.ResultDesc == null">{{data.ResultDesc}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner 
+bdOpacity = 0.9
+bdColor = "#333"
+size = "medium"
+color = "#fff"
+type = "ball-atom"></ngx-spinner>

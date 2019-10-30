@@ -1,0 +1,23 @@
+.error {width:6em}
+.error:hover span {display:none}
+.error:hover:before {
+   content:"Action";
+   cursor: pointer;
+   color: #fff;
+   font-size: 75%;
+   background-color: #4ba104;
+   font-weight: bold;
+   text-transform: uppercase;
+   padding: 4px 8px;
+   min-width: 19px;
+   line-height: 1;
+   text-align: center;
+   white-space: nowrap;
+   vertical-align: baseline;
+   border-radius: .25rem;
+}
+
+.custom-snackbar {
+    background: #2196F3;
+    font-weight: bold;
+  }

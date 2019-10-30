@@ -1,0 +1,277 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="main-card mb-3 card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-primary">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading text-white">Today's Validations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Today's Validations Requests</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-primary">{{DashboardDataArray[0].Total_Validations_Today}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Today's Failed Validations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-danger">{{DashboardDataArray[0].Total_Failed_Validations_Today}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="main-card mb-3 card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-primary">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading text-white">Total Validations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Validations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-primary">{{DashboardDataArray[0].Total_Validations}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Failed Validations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-danger">{{DashboardDataArray[0].Total_Failed_Validations}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------second row-------------------------------------------------------------- -->
+
+    <div class="col-md-6">
+        <div class="main-card mb-3 card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-primary">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading text-white">Today's Confirmations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Today's Payment Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-primary">{{DashboardDataArray[0].Total_Confirmations_Today}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Today's Pending Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-warning">{{DashboardDataArray[0].Total_Pending_Confirmations_Today}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Today's Failed Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-danger">{{DashboardDataArray[0].Total_Failed_Confirmations_Today}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Today's Successful Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-success">{{DashboardDataArray[0].Total_Success_Confirmations_Today}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="main-card mb-3 card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-primary">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading text-white">Total Confirmations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-primary">{{DashboardDataArray[0].Total_Confirmations}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Pending Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-warning">{{DashboardDataArray[0].Total_Pending_Confirmations}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Failed Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-danger">{{DashboardDataArray[0].Total_Failed_Confirmations}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Total Successful Confirmations</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-success">{{DashboardDataArray[0].Total_Success_Confirmations}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="col-md-4">
+        <div class="main-card mb-3 card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-primary">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading text-white">Goods Receipt Note</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="widget-content p-0">
+                        <div class="widget-content-outer">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="widget-heading">Created</div>
+                                </div>
+                                <div class="widget-content-right">
+                                    <div class="widget-numbers text-success">14</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+</div>

@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="main-card mb-5 card">
+            <div class="card-header bg-primary text-white">CUSTOMERS
+                <!-- <div class="btn-actions-pane-right">
+                    <div role="group" class="btn-group-sm btn-group">
+                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            class="btn-shadow dropdown-toggle btn btn-focus">
+                            <span class="btn-icon-wrapper pr-2 opacity-7">
+                                <i class="fa fa-filter fa-w-20"></i>
+                            </span>
+                            Filter
+                        </button>
+                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a (click)="opensearch()" class="nav-link">
+                                        <span>
+                                            Advanced Search
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="mb-0 table table-borderless table-striped table-hover" id="purchase"
+                        style="width:100%">
+                        <thead class="hdr-uppercase">
+                            <tr>
+                                <th>Customer Number</th>
+                                <th>Country Code</th>
+                                <th>Customer Name</th>
+                                <th>Customer Name2</th>
+                                <th>City</th>
+                                <th>PIN Code</th>
+                                <th>Region Code</th>
+                                <th>Address</th>
+                                <th>Telephone</th>
+                                <th>FAX</th>
+                                <th>Customer Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of CustomerArray">
+                                <td>{{data.KUNNR}}</td>
+                                <td>{{data.LAND1}}</td>
+                                <td>{{data.NAME1}}</td>
+                                <td>{{data.NAME2}}</td>
+                                <td>{{data.ORT01}}</td>
+                                <td>{{data.PSTLZ}}</td>
+                                <td>{{data.REGIO}}</td>
+                                <td>{{data.STRAS}}</td>
+                                <td>{{data.TELF1}}</td>
+                                <td>{{data.TELFX}}</td>
+                                <td>{{data.XCPDK}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner 
+bdOpacity = 0.9
+bdColor = "#333"
+size = "medium"
+color = "#fff"
+type = "ball-atom"></ngx-spinner>

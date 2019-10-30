@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="next-auth">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="next-auth-left">
+                        <div class="col-md-12">
+                            <!-- <img class="next-logo-left" src="https://devadityaauto.supplychainh.com/images/logo.svg" width="100"> -->
+                        </div>
+                        <div class="col-md-12">
+                            <h4 style=" margin-top: 50px; ">SCH MPESA Integration Portal</h4>
+                            <h2 class="mt-4 mb-5">Helping Organisations to connect their ERP Systems with MPESA real time.</h2>
+                        </div>
+                        <div class="col-md-12 next-img">
+                            <img src="./../../../assets/images/1.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 next-p-right">
+                    <div class="next-auth-right">
+                        <div class="next-auth-logo">
+                            <img src="https://devadityaauto.supplychainh.com/img/sch_logo.png" class="img-responsive">
+                        </div>
+                        <h4>Login</h4>
+                        <div class="next-auth-form">
+                            <form [formGroup]="loginform" (ngSubmit)="onSubmit(loginform.valid,loginform.value)"
+                                class="example-form">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Email</mat-label>
+                                    <input matInput type="text" formControlName="email" placeholder="Email-Id*">
+                                </mat-form-field>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password"
+                                        placeholder="Password*">
+                                    <mat-icon matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                        class="pointer" [attr.aria-pressed]="hide">
+                                        {{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </mat-form-field>
+                                <div class="row" style="margin: 0px;">
+                                    <p class="widget-subheading text-warning">
+                                        Please do not share your login credentials with anyone.
+                                    </p>
+                                </div>
+                                <div class="row" style="margin: 0px;">
+                                    <span class="next-auth-span">Forgot Password ?</span>
+                                    <button mat-raised-button color="primary">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="next-c"></div>
+<!-- <div class="next-c"></div> -->
