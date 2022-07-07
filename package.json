@@ -23,7 +23,7 @@
     "@angular/pwa": "^0.803.9",
     "@angular/router": "~8.2.0",
     "@angular/service-worker": "~8.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "ngx-spinner": "^8.0.3",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
